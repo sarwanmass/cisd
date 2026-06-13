@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Gallery - CISD India{% endblock %}
+{% block content %}
+<section class="hero" style="height: 40vh; background-image: url('{{ url_for('static', filename='assets/gallery/hero.png') }}');">
+    <div class="container" style="text-align: center;">
+        <h1 style="margin: 0;">Gallery</h1>
+        <p>Capturing Impact and Transforming Lives</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Photo Gallery</h2>
+        <div class="grid grid-3">
+            <div class="card text-center">
+                <div style="width: 100%; height: 200px; background: #E2E8F0; border-radius: 4px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #94A3B8;">
+                    [Image Placeholder]
+                </div>
+                <h3>Training Programmes</h3>
+            </div>
+            <div class="card text-center">
+                <div style="width: 100%; height: 200px; background: #E2E8F0; border-radius: 4px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #94A3B8;">
+                    [Image Placeholder]
+                </div>
+                <h3>Student Activities</h3>
+            </div>
+            <div class="card text-center">
+                <div style="width: 100%; height: 200px; background: #E2E8F0; border-radius: 4px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #94A3B8;">
+                    [Image Placeholder]
+                </div>
+                <h3>Workshops</h3>
+            </div>
+            <div class="card text-center">
+                <div style="width: 100%; height: 200px; background: #E2E8F0; border-radius: 4px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #94A3B8;">
+                    [Image Placeholder]
+                </div>
+                <h3>Conferences</h3>
+            </div>
+            <div class="card text-center">
+                <div style="width: 100%; height: 200px; background: #E2E8F0; border-radius: 4px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #94A3B8;">
+                    [Image Placeholder]
+                </div>
+                <h3>Community Outreach</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Video Gallery</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Success Stories</h3>
+            </div>
+            <div class="card">
+                <h3>Beneficiary Testimonials</h3>
+            </div>
+            <div class="card">
+                <h3>Programme Highlights</h3>
+            </div>
+            <div class="card">
+                <h3>Events & Celebrations</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container text-center" style="max-width: 800px;">
+        <h2 class="mb-4">Impact Stories</h2>
+        <p class="text-muted text-center">Read inspiring stories of transformation and success from individuals and communities supported by CISD.</p>
+        <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 2rem; text-align: left;">
+            <div class="card">
+                <i style="color: var(--text-muted); font-size: 1.1rem;">"Mr. Ganjendra, trained under Dr. Saravana K - CISD, presently working as HR in Adani Group."</i>
+            </div>
+            <div class="card">
+                <i style="color: var(--text-muted); font-size: 1.1rem;">"Ms. Aishwarya, Trained under Dr. Saravana K - CISD, Presently working as HR in IT Sector."</i>
+            </div>
+            <div class="card">
+                <i style="color: var(--text-muted); font-size: 1.1rem;">"Mr. Naveen Kumar, Trained under Dr. Saravana K - CISD, Presently working as HR in Manufacturing industry."</i>
+            </div>
+            <div class="card">
+                <i style="color: var(--text-muted); font-size: 1.1rem;">"Mr. Vishnu, Trained under Dr. Saravana K - CISD, presently working as recruiter for Zepto."</i>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

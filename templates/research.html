@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block title %}Research & Publications - CISD India{% endblock %}
+{% block content %}
+<section class="hero" style="height: 40vh; background-image: url('{{ url_for('static', filename='assets/research/hero.png') }}');">
+    <div class="container" style="text-align: center;">
+        <h1 style="margin: 0;">Research & Publications</h1>
+        <p>Evidence-Based Solutions for Social Development</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <p class="text-center mb-4 text-muted" style="max-width: 800px; margin: 0 auto;">CISD conducts research, monitoring, evaluation, and impact assessment studies that support policy, programme improvement, and social innovation.</p>
+        
+        <h2 class="mb-4 text-center">Areas of Expertise</h2>
+        <div class="grid grid-3">
+            <div class="card text-center">
+                <h3>Social Research</h3>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Community Studies</li>
+                    <li>Social Impact Assessments</li>
+                    <li>Social Policy Research</li>
+                </ul>
+            </div>
+            <div class="card text-center">
+                <h3>Educational Research</h3>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Learning Assessments</li>
+                    <li>School Education Studies</li>
+                    <li>Youth Development Research</li>
+                </ul>
+            </div>
+            <div class="card text-center">
+                <h3>Public Health Research</h3>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Community Health Studies</li>
+                    <li>Healthcare Access Research</li>
+                    <li>Mental Health Research</li>
+                </ul>
+            </div>
+            <div class="card text-center">
+                <h3>CSR Impact Assessment</h3>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Baseline Studies</li>
+                    <li>Midline Evaluations</li>
+                    <li>Endline Assessments</li>
+                    <li>Social Audits</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Major Research Contributions</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>ASER Survey – 2018</h3>
+                <p>CISD experts participated in educational assessment and field research activities under the Annual Status of Education Report (ASER) Survey, contributing to understanding learning outcomes among school children.</p>
+            </div>
+            <div class="card">
+                <h3>Impact Assessment Studies</h3>
+                <ul>
+                    <li>Education Programmes</li>
+                    <li>Youth Employability Projects</li>
+                    <li>CSR Initiatives</li>
+                    <li>Community Development Programmes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Our Research Team</h2>
+        <p class="mb-4">Our multidisciplinary team includes:</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+            <span class="badge">Social Scientists</span>
+            <span class="badge">Public Health Experts</span>
+            <span class="badge">Statisticians</span>
+            <span class="badge">Data Analysts</span>
+            <span class="badge">Education Specialists</span>
+            <span class="badge">HR Professionals</span>
+            <span class="badge">Monitoring & Evaluation Experts</span>
+            <span class="badge">Development Practitioners</span>
+        </div>
+    </div>
+</section>
+{% endblock %}
