@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CISD India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .admin-nav { background: var(--primary-blue); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .admin-content { padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav class="admin-nav">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="{{ url_for('static', filename='assets/logo/logo.png') }}" alt="Logo" style="height: 40px; background: white; padding: 4px; border-radius: 4px;">
+            <h2>CISD Admin Portal</h2>
+        </div>
+        <div>
+            <a href="{{ url_for('home') }}" target="_blank" style="color: white; margin-right: 1.5rem;">View Website</a>
+            <a href="{{ url_for('admin_logout') }}" class="btn" style="background: rgba(255,255,255,0.1); color: white;">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container admin-content" style="max-width: 1400px;">
+        <h2 class="mb-4">Recent Applications & Inquiries</h2>
+        
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Programme / Interest</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for app in applications %}
+                    <tr>
+                        <td>#{{ app.id }}</td>
+                        <td>{{ app.created_at }}</td>
+                        <td><strong>{{ app.name }}</strong></td>
+                        <td><a href="mailto:{{ app.email }}">{{ app.email }}</a></td>
+                        <td>{{ app.phone }}</td>
+                        <td><span class="badge">{{ app.programme }}</span></td>
+                        <td style="max-width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="{{ app.message }}">{{ app.message }}</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="7" class="text-center">No applications found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
